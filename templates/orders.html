@@ -1,0 +1,62 @@
+<!-- templates/orders.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+ {% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">My Orders</h2>
+    {% if orders %}
+        {% for order in orders %}
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">
+                    <strong>Order ID:</strong> {{ order.order_id }} |
+                    <strong>Date:</strong> {{ order.order_date.strftime('%Y-%m-%d') }}
+                </div>
+                <div class="card-body">
+                    {% set items = order_items[order.order_id] %}
+                    {% if items %}
+                        <ul class="list-group mb-3">
+                            {% for order in orders %}
+  <div class="order">
+    <h4>Order ID: {{ order.id }} | Status: {{ order.status }}</h4>
+    <ul>
+      {% set items = order_items[order.id] %}
+      {% for item in items %}
+        <li>{{ item.title }} - Qty: {{ item.quantity }} - ₹{{ item.price }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+
+                        <div class="text-end mb-2">
+                            <strong>Total: ₹{{ order.total_amount }}</strong>
+                        </div>
+                        <div class="text-end">
+                            <span class="badge bg-success me-2">
+                                Payment: {{ order.payment_status | capitalize }}
+                            </span>
+                            <span class="badge bg-info text-dark">
+                                Method: {{ order.method }}
+                            </span>
+                        </div>
+                    {% else %}
+                        <p>No items found for this order.</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>You have not placed any orders yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+   
+        
+</body>
+</html>

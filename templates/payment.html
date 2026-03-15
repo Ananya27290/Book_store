@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Payment Page</h2>
+    <p>Total to Pay: ₹{{ total }}</p>
+    <form method="POST" action="{{ url_for('order.process_payment') }}">
+        <!-- You can later replace this with real payment integration -->
+        <button type="submit" class="btn btn-success">Pay Now</button>
+    </form>
+</div>
+{% endblock %}
