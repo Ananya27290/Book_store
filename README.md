@@ -1,15 +1,11 @@
-# 📚 Online Bookstore Management System
-
-## 📌 Project Description
+ Online Bookstore Management System
+ Project Description
 
 The **Online Bookstore Management System** is a web-based application developed using **Python (Flask)** and **MySQL**.
 It allows users to browse books, add them to cart, and place orders. The system also includes an **admin panel** to manage books and orders.
 
----
-
-## 🚀 Features
-
-### 👤 User Features
+ Features
+ User Features
 
 * User Registration & Login
 * Browse Available Books
@@ -17,7 +13,7 @@ It allows users to browse books, add them to cart, and place orders. The system 
 * Place Orders
 * View Order History
 
-### 🔐 Admin Features
+ Admin Features
 
 * Admin Login
 * Add New Books
@@ -27,7 +23,7 @@ It allows users to browse books, add them to cart, and place orders. The system 
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * **Backend:** Python, Flask
 * **Frontend:** HTML, CSS, Bootstrap
@@ -36,7 +32,7 @@ It allows users to browse books, add them to cart, and place orders. The system 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 online_bookstore/
@@ -54,33 +50,33 @@ online_bookstore/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1 Clone the Repository
 
 ```bash
 git clone https://github.com/Ananya27290/Book_store.git
 cd Book_store
 ```
 
-### 2️⃣ Install Dependencies
+### 2️ Install Dependencies
 
 ```bash
 pip install flask pymysql flask-login
 ```
 
-### 3️⃣ Setup Database
+### 3️ Setup Database
 
 * Create a MySQL database
 * Update your database credentials in `config.py`
 
-### 4️⃣ Run the Application
+### 4️ Run the Application
 
 ```bash
 python app.py
 ```
 
-### 5️⃣ Open in Browser
+### 5️ Open in Browser
 
 ```
 http://127.0.0.1:5000
@@ -88,13 +84,13 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Screenshots (Optional)
+##  Screenshots (Optional)
 
 *Add screenshots of your project here to make it more attractive.*
 
 ---
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 * Online Payment Integration
 * Search & Filter Books
@@ -103,14 +99,14 @@ http://127.0.0.1:5000
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Ananya S**
 Computer Science Engineering Student
 
 ---
 
-## ⭐ Acknowledgment
+##  Acknowledgment
 
 This project was developed as part of academic learning and practice for software development.
 
